@@ -1,5 +1,19 @@
+const board = document.querySelector(".board");
+const defaultSize = 16;
+
+const rangeInput = document.querySelector("#range");
+const sizeValue = document.querySelector("#sizeValue");
+
+rangeInput.addEventListener("input", function () {
+  const value = parseInt(this.value);
+  sizeValue.textContent = `${value} X ${value}`;
+  populateBoard(value);
+});
+
+populateBoard(defaultSize);
+
 function populateBoard(size) {
-  const board = document.querySelector(".board");
+  board.innerHTML = "";
   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
@@ -12,4 +26,4 @@ function populateBoard(size) {
   }
 }
 
-populateBoard(64);
+
