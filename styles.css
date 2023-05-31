@@ -107,6 +107,10 @@ body {
   font-weight: 600;
 }
 
+button.active {
+    background-color: #343a40;
+  }
+
 .range {
   width: 50%;
   border: solid 2px #364fc7;
