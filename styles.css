@@ -53,18 +53,24 @@ body {
   background-color: #202020;
 }
 
-input[type="color"] {
+.colorPicker {
+  padding: 0;
+  background-color: transparent;
   appearance: none;
-  -webkit-appearance: none;
-  width: 8rem;
-  height: 8rem;
-  border: none; 
+  /* -moz-appearance: none; */
+  /* -webkit-appearance: none; */
+  width: 9rem;
+  height: 9rem;
+  border: none;
+  border-radius: 4rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  outline: none;
 }
 
 .colorPicker::-webkit-color-swatch {
-    border-radius: 1.5rem;
+  border: none;
+  border-radius: 1rem;
 }
 
 .colorPicker:hover {
@@ -103,15 +109,73 @@ input[type="color"] {
 
 .range {
   width: 50%;
+  border: solid 2px #364fc7;
+  border-radius: 8px;
+  height: 1rem;
+  outline: none;
+  transition: all 450ms ease-in;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.range::-webkit-slider-thumb {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #434343;
+}
+
+.range::-moz-slider-thumb {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -moz-appearance: none;
+  cursor: ew-resize;
+  background: #434343;
+}
+
+input .range {
+  width: 20px;
 }
 
 .board {
-  width: 65rem;
-  height: 65rem;
+  width: 62rem;
+  height: 62rem;
   display: grid;
   justify-self: flex-end;
 
   padding: 3rem;
   background-color: #202020;
   border-radius: 3rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.copyright {
+  font-size: 2.2rem;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.leftmg {
+    margin-left: .6rem;
+}
+
+.fa-github {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: scale(1.2);
 }
